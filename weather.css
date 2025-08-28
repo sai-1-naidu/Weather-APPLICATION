@@ -1,0 +1,123 @@
+/* General container */
+.weather-container {
+  font-family: "Poppins", sans-serif;
+  padding: 30px;
+  text-align: center;
+  min-height: 100vh;
+  color: #fff;
+  transition: background 0.5s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Different weather backgrounds */
+/* Default background */
+.weather-container.default {
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+}
+
+/* Sunny */
+.weather-container.sunny {
+  background-image: url("https://www.pinterest.com/pin/363032419948447528.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Cloudy */
+.weather-container.cloudy {
+  background-image: url("https://commons.wikimedia.org/wiki/File:Clouds.gif");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Rainy */
+.weather-container.rainy {
+  background-image: url("https://pixabay.com/gifs/rainy-natural-rain-floor-18720");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Snowy */
+.weather-container.snowy {
+  background-image: url("https://images.unsplash.com/photo-1608889175808-3a6c0f7a1c8f");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Stormy */
+.weather-container.stormy {
+  background-image: url("https://giphy.com/explore/dark-storm.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Input field */
+.weather-input {
+  padding: 12px;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 250px;
+  font-size: 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.weather-input:focus {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Button */
+.weather-btn {
+  padding: 12px 20px;
+  background: #ff9800;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weather-btn:hover {
+  background: #e68900;
+  transform: scale(1.05);
+}
+
+/* Weather result box */
+.weather-result {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+  animation: fadeInUp 1s ease;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
